@@ -1,0 +1,37 @@
+# Entorno
+.env
+.env.*
+!.env.example
+
+# Logs y temporales
+*.log
+*.tmp
+*.temp
+*.bak
+*.zip
+
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE / editor
+.idea/
+.vscode/
+*.suo
+*.user
+*.userossc
+
+# Git
+.git/
+
+# Proyecto
+ControlHorario-v20260323/storage/logs/*
+!ControlHorario-v20260323/storage/logs/.gitkeep
+ControlHorario-v20260323/public/assets/uploads/*
+!ControlHorario-v20260323/public/assets/uploads/.gitkeep
+ControlHorario-v20260323/resources/views/errors/error_log
+
+# Configuración sensible generada en instalación
+ControlHorario-v20260323/.env
+ControlHorario-v20260323/public/.env

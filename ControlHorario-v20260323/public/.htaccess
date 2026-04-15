@@ -1,0 +1,34 @@
+Options -Indexes
+
+AddDefaultCharset UTF-8
+<IfModule mod_mime.c>
+    AddCharset UTF-8 .php .html .htm .css .js
+</IfModule>
+
+# â”€â”€ Seguridad: bloquear acceso directo a archivos PHP que no sean index â”€â”€
+<FilesMatch "^(?!index\.php$).*\.php$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# â”€â”€ Seguridad: cabeceras HTTP (Apache â€” el servidor usa nginx pero por si acaso) â”€â”€
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "DENY"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set X-DNS-Prefetch-Control "off"
+    Header always unset X-Powered-By
+    Header always unset Server
+</IfModule>
+
+RewriteEngine On
+
+# Excluir la carpeta install/ del router principal
+RewriteRule ^install(/.*)?$ - [L]
+
+# Excluir archivos y directorios reales (assets, etc.)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Enviar todo lo demÃ¡s al front controller
+RewriteRule ^(.*)$ index.php [QSA,L]

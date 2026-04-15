@@ -1,0 +1,28 @@
+Options -Indexes
+
+# ── Proteger ficheros sensibles de la raíz del proyecto ──────────────────────
+<FilesMatch "^\.env">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+<FilesMatch "(composer\.(json|lock)|\.env\.example|schema\.sql|.*\.log|.*\.bak)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# ── Reescritura transparente: / → public/ ────────────────────────────────────
+# Permite acceder a la app desde la raíz del dominio sin /public en la URL.
+# El usuario ve https://domain.com/login en vez de https://domain.com/public/login
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Redirigir /public/* → /* con 301 (quita /public/ de la URL visible)
+    RewriteRule ^public/(.*)$ /$1 [R=301,L]
+
+    # No reescribir si el fichero/directorio existe físicamente en la raíz
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    # Reescribir todo lo demás a public/ (transparente, URL limpia en el navegador)
+    RewriteRule ^(.*)$ public/$1 [QSA,L]
+</IfModule>

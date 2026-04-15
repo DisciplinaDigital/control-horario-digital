@@ -1,0 +1,19 @@
+Options -Indexes
+
+AddDefaultCharset UTF-8
+<IfModule mod_mime.c>
+    AddCharset UTF-8 .php .html .htm .css .js
+</IfModule>
+
+# Proteger el archivo de bloqueo de acceso directo
+<Files ".lock">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Una vez instalado, bloquear acceso a todo excepto index.php
+# (descomenta estas líneas tras confirmar la instalación)
+# <FilesMatch "^(?!index\.php$)">
+#     Order allow,deny
+#     Deny from all
+# </FilesMatch>

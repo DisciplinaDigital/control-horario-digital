@@ -35,3 +35,8 @@ ControlHorario-v20260323/resources/views/errors/error_log
 # Configuración sensible generada en instalación
 ControlHorario-v20260323/.env
 ControlHorario-v20260323/public/.env
+WEB/.env
+WEB/storage/logs/*
+!WEB/storage/logs/.gitkeep
+WEB/storage/downloads/*
+!WEB/storage/downloads/.gitkeep

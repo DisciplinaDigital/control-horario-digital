@@ -1,55 +1,63 @@
 # Control Horario Digital v1.0
 
-Sistema web open source de registro de jornada laboral, orientado a empresas y asesorías que necesitan una solución autoalojable, trazable y fácil de desplegar.
+Sistema web open source de registro de jornada laboral, orientado a empresas y asesorias que necesitan una solucion autoalojable, trazable y facil de desplegar.
 
 Desarrollado por **Javier Ortiz**  
 [disciplinadigital.es](https://disciplinadigital.es)
 
-## Descripción
+## Descripcion
 
-Control Horario Digital permite registrar entrada y salida desde web móvil, tablet o escritorio, gestionar incidencias, vacaciones y festivos, y disponer de exportaciones útiles para revisión interna e inspección.
+Control Horario Digital permite registrar entrada y salida desde web movil, tablet o escritorio, gestionar incidencias, vacaciones y festivos, y disponer de exportaciones utiles para revision interna e inspeccion.
 
-La aplicación está pensada para instalación en servidor propio, sin cuotas de suscripción y sin dependencia de servicios externos para su funcionamiento principal.
+La aplicacion esta pensada para instalacion en servidor propio, sin cuotas de suscripcion y sin dependencia de servicios externos para su funcionamiento principal.
 
 ## Funcionalidades principales
 
 - Registro diario de jornada con entrada y salida
-- Panel de administración y área de empleado
-- Gestión de usuarios, departamentos y roles
-- Gestión de incidencias con correcciones administrativas trazables
-- Gestión de vacaciones y festivos
-- Geolocalización configurable con radio global y override por empleado
-- Verificación de integridad de fichajes
-- Exportación CSV y PDF
-- Personalización de empresa, logo, colores y horarios
+- Panel de administracion y area de empleado
+- Gestion de usuarios, departamentos y roles
+- Gestion de incidencias con correcciones administrativas trazables
+- Gestion de vacaciones y festivos
+- Geolocalizacion configurable con radio global y override por empleado
+- Verificacion de integridad de fichajes
+- Exportacion CSV y PDF
+- Personalizacion de empresa, logo, colores y horarios
 
-## Requisitos técnicos
+## Requisitos tecnicos
 
 - PHP 8.1 o superior
 - MySQL 5.7+ o MariaDB 10.3+
 - Extensiones PHP: `PDO`, `pdo_mysql`, `openssl`, `mbstring`, `json`, `gd` o `imagick`
-- HTTPS recomendado y necesario para geolocalización en navegador
+- HTTPS recomendado y necesario para geolocalizacion en navegador
 
-## Instalación rápida
+## Instalacion rapida
 
 1. Sube los archivos al servidor.
 2. Accede a `/public/install/`.
-3. Sigue el asistente de instalación.
-4. Finaliza la configuración inicial y entra con la cuenta de administrador.
+3. Sigue el asistente de instalacion.
+4. Finaliza la configuracion inicial y entra con la cuenta de administrador.
 
-## Documentación
+## Documentacion
 
-En la raíz del proyecto se incluyen:
+En la raiz del proyecto se incluyen:
 
 - `Documentacion.pdf`
 - `README.md`
 - `LICENSE.txt`
+- `TRADEMARKS.md`
 
 ## Licencia
 
-Este proyecto se distribuye bajo licencia **GNU GPL v3**.  
-Consulta el archivo `LICENSE.txt` para el texto completo.
+Este proyecto se distribuye bajo licencia **GNU AGPL v3 o posterior**.
+
+Puedes usarlo, estudiarlo, modificarlo y redistribuirlo conforme a los terminos de `LICENSE.txt`. Si ejecutas una version modificada accesible por red, la licencia exige ofrecer el codigo fuente correspondiente de esa version modificada a sus usuarios.
+
+## Marcas y signos distintivos
+
+La licencia del codigo no concede derechos sobre nombres comerciales, marcas, logotipos, identidad visual ni otros signos distintivos del proyecto o de Disciplina Digital.
+
+Consulta `TRADEMARKS.md` para el detalle.
 
 ## Aviso
 
-La aplicación está orientada al registro diario de jornada y a la trazabilidad operativa de los fichajes. Cada empresa debe valorar su adecuación legal, laboral y de protección de datos según su caso concreto.
+La aplicacion esta orientada al registro diario de jornada y a la trazabilidad operativa de los fichajes. Cada empresa debe valorar su adecuacion legal, laboral y de proteccion de datos segun su caso concreto.
